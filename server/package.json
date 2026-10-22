@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node --check server.js && node --check routes/auth.js && node --check routes/reminders.js && node --check routes/dashboard.js && node --check middleware/auth.js && node --check models/User.js && node --check models/Reminder.js && node --check services/mailer.js && node --check jobs/reminderJob.js"
   },
   "keywords": [],
   "author": "",
